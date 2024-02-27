@@ -1,16 +1,17 @@
-import { StarIcon } from "lucide-react";
+import Link from "next/link";
 import Image from "next/image";
-import { FaReact } from "react-icons/fa";
 
 interface WritingCardProps {
   title: string;
   summary: string;
   date: string;
   image: string;
+  slug: string;
 }
 
-const WritingCard = ({ title, summary, date, image }: WritingCardProps) => {
+const WritingCard = ({ title, summary, date, image,slug }: WritingCardProps) => {
   return (
+    <Link href={`/writings/${slug}`}>
     <div className="flex flex-col-reverse md:flex-row gap-5">
       <div className="flex flex-col space-y-1 flex-1">
         <h2>{title}</h2>
@@ -35,6 +36,7 @@ const WritingCard = ({ title, summary, date, image }: WritingCardProps) => {
         />
       </div> */}
     </div>
+    </Link>
   );
 };
 

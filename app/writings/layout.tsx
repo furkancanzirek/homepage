@@ -1,4 +1,4 @@
-
+import { ScrollArea } from "@/components/commons/ScrollArea";
 
 interface WritingLayoutProps {
   children: React.ReactNode;
@@ -6,8 +6,8 @@ interface WritingLayoutProps {
 
 export default async function WritingLayout({ children }: WritingLayoutProps) {
   return (
-    <>
-      <div className="flex-1">{children}</div>
-    </>
+    <ScrollArea className="flex-1">
+      {children}
+    </ScrollArea>
   );
 }

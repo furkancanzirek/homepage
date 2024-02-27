@@ -7,8 +7,8 @@ export const MENU_LINKS = [
     icon: <SparklesIcon size={16} />,
   },
   {
-    label: "Writing",
-    href: "/writing",
+    label: "Writings",
+    href: "/writings",
     icon: <PencilIcon size={16} />
   },
   {

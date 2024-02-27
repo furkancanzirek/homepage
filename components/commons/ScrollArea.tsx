@@ -12,8 +12,7 @@ export const ScrollArea: React.FC<ScrollAreaProps> = ({
   className,
 }) => {
   return (
-    <div className={cn("scrollable-area", className)}>
-      {title && <h2>{title}</h2>}
+    <div className={cn("scrollable-area relative w-full", className)}>
       {children}
     </div>
   );

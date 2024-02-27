@@ -21,7 +21,7 @@ export const MenuContent: React.FC<{}> = ({}) => {
             <span className="text-gray-600">Frontend Engineer</span>
           </div>
         </Link>
-        <ul>
+        <ul className="space-y-0.5">
           {MENU_LINKS.map((link) => (
             <NavigationLink
               key={link.href}

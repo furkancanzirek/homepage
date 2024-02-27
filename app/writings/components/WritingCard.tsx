@@ -11,7 +11,8 @@ interface WritingCardProps {
 
 const WritingCard = ({ title, summary, date, image,slug }: WritingCardProps) => {
   return (
-    <Link href={`/writings/${slug}`}>
+    <Link href={`/writings/${slug}`}
+    >
     <div className="flex flex-col-reverse md:flex-row gap-5">
       <div className="flex flex-col space-y-1 flex-1">
         <h2>{title}</h2>
@@ -25,7 +26,9 @@ const WritingCard = ({ title, summary, date, image,slug }: WritingCardProps) => 
          max-w-52 md:max-w-60
         aspect-[1/1] md:aspect-auto"
       >
-        <Image src={image} alt="Picture of the author" layout="fill"  className={"animate-reveal "} />
+        <Image src={image} alt="Picture of the author" fill  className={"animate-reveal "} 
+        sizes="100px"
+        />
       </div>
       {/* <div className={"image-container h-40"}>
         <Image

@@ -1,7 +1,7 @@
 import { MENU_LINKS } from "@/lib/constants";
 import { NavigationLink } from "@/components/commons/NavigationLink";
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaLinkedinIn } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const MenuContent: React.FC<{}> = ({}) => {
   return (
@@ -48,7 +48,7 @@ export const MenuContent: React.FC<{}> = ({}) => {
               href="https://www.linkedin.com/in/furkancanzirek/"
               target="blank"
             >
-              <FaLinkedinIn size={20} />
+              <FaLinkedin size={20} />
             </a>
           </div>
         </div>

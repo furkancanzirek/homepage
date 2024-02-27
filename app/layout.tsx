@@ -9,7 +9,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className={GeistSans.className}>
-      <body>
+      <body className="scrollbar-stable">
         <div className="lg:flex">
           <ScrollArea className="hidden bg-zinc-50 lg:flex lg:flex-col lg:border-r lg:w-60 xl:w-72">
             <div className="bg-zinc-50 p-3">

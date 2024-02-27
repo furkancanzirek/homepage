@@ -132,4 +132,26 @@
   .scrollable-area {
     @apply h-full max-h-dynamic-screen min-h-dynamic-screen overflow-y-auto overflow-x-hidden;
   }
+  .scrollbar-stable {
+    margin-right: calc(100% - 100vw);
+  }
+
+  .image-container {
+    width: 100%;
+
+    > div {
+      position: unset !important;
+    }
+
+    .image {
+      object-fit: contain;
+      width: 100% !important;
+      position: relative !important;
+      height: unset !important;
+    }
+  }
+  .blur-image-transition {
+    @apply blur-3xl transition-all duration-300;
+  }
+  
 }

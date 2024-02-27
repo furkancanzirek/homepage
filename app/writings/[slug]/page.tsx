@@ -10,7 +10,7 @@ export default async function PostPage({
   });
 
   return (
-    <div className="content-wrapper">
+    <div className="content-wrapper writings-wrapper">
       <div className="content">
         <>{content}</>
         <div className="mt-10 py-10 border-t ">

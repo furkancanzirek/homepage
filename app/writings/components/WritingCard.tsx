@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import {dateToLocaleShort} from "@/lib/utils";
 
 interface WritingCardProps {
   title: string;
@@ -10,6 +11,7 @@ interface WritingCardProps {
 }
 
 const WritingCard = ({ title, summary, date, image,slug }: WritingCardProps) => {
+  date = dateToLocaleShort(date);
   return (
     <Link href={`/writings/${slug}`}
     >
@@ -26,8 +28,8 @@ const WritingCard = ({ title, summary, date, image,slug }: WritingCardProps) => 
          max-w-52 md:max-w-60
         aspect-[1/1] md:aspect-auto"
       >
-        <Image src={image} alt="Picture of the author" fill  className={"animate-reveal "} 
-        sizes="100px"
+        <Image src={image} alt="Picture of the author" fill  className={"animate-reveal"} 
+        sizes="300px"
         />
       </div>
       {/* <div className={"image-container h-40"}>

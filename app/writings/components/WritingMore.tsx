@@ -1,6 +1,8 @@
 import { getFilesWithCount } from "@/lib/readMdxFile";
 import WritingCard from "./WritingCard";
 
+
+
 const WritingMore = async () => {
   const writes = await getFilesWithCount(2);
 

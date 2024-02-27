@@ -1,23 +1,29 @@
 import Image from "next/image";
 import { ScrollArea } from "@/components/commons/ScrollArea";
+import Link from "next/link";
+import WritingMore from "./writings/components/WritingMore";
+import MenuList from "@/components/MenuList";
 
 export default function Home() {
   return (
     <div className="content-wrapper flex-1">
       <div className="content">
         <p>
-          {
-            "Hi 👋 I'm Furkan, a software engineer, Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem quidem, accusantium iure sit eaque officiis qui praesentium quam? Neque, quam!"
-          }
+          {`Hi 👋 I'm Furkan Can Zirek, and I’m a Software Engineer at Monopayments. I live in Istanbul, Turkey
+            Some of my main interest areas are Music, Traveling, Video Games and JavaScript (programming language).`}
         </p>
+
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
-          nihil! Doloremque placeat ipsam vel magni, sit consectetur inventore
-          nam optio at dolores autem id qui laboriosam, quis laborum soluta
-          quisquam? Nobis odio quam cupiditate officia saepe est sint ut,
-          aliquam culpa dolore vitae doloremque! Deleniti quisquam consectetur
-          neque asperiores vero.
+          Here, on my website, you’ll find my writings and thoughts about random
+          topics. You can also find some of my projects and{" "}
+          <Link className="text-black font-bold hover:underline" href="/about">
+            learn more about me.
+          </Link>
         </p>
+
+        <div className="py-20">
+          <MenuList />
+        </div>
       </div>
     </div>
   );

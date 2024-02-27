@@ -19,7 +19,7 @@
   }
 
   html {
-    @apply overflow-hidden scroll-smooth antialiased;
+    @apply overflow-x-hidden scroll-smooth antialiased;
     text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
   }
@@ -133,7 +133,7 @@
     @apply h-full max-h-dynamic-screen min-h-dynamic-screen overflow-y-auto overflow-x-hidden;
   }
   .scrollbar-stable {
-    margin-right: calc(100% - 100vw);
+    margin-left: calc(100vw - 100%);
   }
 
   .image-container {

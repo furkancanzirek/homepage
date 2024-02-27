@@ -6,8 +6,8 @@ interface WritingLayoutProps {
 
 export default async function WritingLayout({ children }: WritingLayoutProps) {
   return (
-    <ScrollArea className="flex-1">
+    <div className="flex-1">
       {children}
-    </ScrollArea>
+    </div>
   );
 }

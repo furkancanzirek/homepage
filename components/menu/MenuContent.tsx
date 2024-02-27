@@ -1,10 +1,12 @@
 import { MENU_LINKS } from "@/lib/constants";
 import { NavigationLink } from "@/components/commons/NavigationLink";
 import Link from "next/link";
+import { FaGithub, FaLinkedin, FaLinkedinIn } from "react-icons/fa";
+
 export const MenuContent: React.FC<{}> = ({}) => {
   return (
-    <div className="flex w-full flex-col text-sm">
-      <div className="flex flex-col gap-4">
+    <div className="flex w-full text-sm">
+      <div className="flex w-full justify-between items-center gap-4 py-3">
         <Link href="/" className="link-card inline-flex items-center gap-2 p-2">
           <img
             src="/assets/me.jpeg"
@@ -21,18 +23,35 @@ export const MenuContent: React.FC<{}> = ({}) => {
             <span className="text-gray-600">Frontend Engineer</span>
           </div>
         </Link>
-        <ul className="space-y-0.5">
-          {MENU_LINKS.map((link) => (
-            <NavigationLink
-              key={link.href}
-              href={link.href}
-              label={link.label}
-              icon={link.icon}
+        <div className="flex">
+          <ul className="space-x-2.5 flex  items-center">
+            {MENU_LINKS.map((link) => (
+              <NavigationLink
+                key={link.href}
+                href={link.href}
+                label={link.label}
+                icon={link.icon}
+              >
+                {link.label}
+              </NavigationLink>
+            ))}
+          </ul>
+          <div
+            className="
+        px-3 flex gap-2 items-center
+        "
+          >
+            <a href="https://github.com/furkancanzirek" target="blank">
+              <FaGithub size={20} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/furkancanzirek/"
+              target="blank"
             >
-              {link.label}
-            </NavigationLink>
-          ))}
-        </ul>
+              <FaLinkedinIn size={20} />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,8 +1,9 @@
-import { ScrollArea } from "@/components/commons/ScrollArea";
+import MobileMenuDrawer from "@/components/commons/MobileMenuDrawer";
 
 interface WritingLayoutProps {
   children: React.ReactNode;
 }
+
 
 export default async function WritingLayout({ children }: WritingLayoutProps) {
   return (

@@ -15,7 +15,7 @@
 
   html,
   body {
-    @apply bg-white;
+    @apply bg-white overflow-hidden;
   }
 
   html {
@@ -119,7 +119,7 @@
   }
 
   .content-wrapper {
-    @apply z-[1] w-full px-6 pb-8 pt-8 lg:px-8 lg:pb-16 lg:pt-24;
+    @apply z-[1] w-full px-6 pb-8 pt-8 lg:px-8 lg:pb-16 lg:pt-20;
   }
 
   .content {

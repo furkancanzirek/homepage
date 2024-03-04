@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function dateToLocaleShort(date: string) {
+export function dateToLocaleShort(date: Date) {
   return new Date(date).toLocaleDateString(undefined, {
     year: "numeric",
     month: "long",
@@ -13,14 +13,14 @@ export function dateToLocaleShort(date: string) {
   });
 }
 
-export function dateToMonthDay(date: string) {
+export function dateToMonthDay(date: Date) {
   return new Date(date).toLocaleDateString(undefined, {
     month: "numeric",
     day: "numeric",
   });
 }
 
-export function dateToYear(date: string) {
+export function dateToYear(date: Date) {
   return new Date(date).toLocaleDateString(undefined, {
     year: "numeric",
   });

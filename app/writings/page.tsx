@@ -1,12 +1,16 @@
 import WritingList from "./components/WritingList";
 import { ScrollArea } from "@/components/commons/ScrollArea";
+import Header from "@/components/commons/Header";
 const WritingsPage = () => {
   return (
-    <div className="content-wrapper flex-1">
-      <div className="content">
-        <WritingList />
+    <>
+      <Header />
+      <div className="content-wrapper flex-1">
+        <div className="content">
+          <WritingList />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

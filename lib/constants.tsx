@@ -11,9 +11,9 @@ export const MENU_LINKS = [
     href: "/writings",
     icon: <PencilIcon size={16} />
   },
-  {
+  /* {
     label: "About",
     href: "/about",
     icon: <UserIcon size={16} />
-  },
+  }, */
 ];

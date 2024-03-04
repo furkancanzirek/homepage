@@ -29,7 +29,7 @@ export default async function getMdxDatas({
     notFound();
   }
 
-  const { content, frontmatter } = await compileMDX<{ title: string }>({
+  const { content, frontmatter } = await compileMDX<{ title: string,date:Date }>({
     source: markdown,
     options: { parseFrontmatter: true },
   });

@@ -2,12 +2,19 @@ import { MENU_LINKS } from "@/lib/constants";
 import { NavigationLink } from "@/components/commons/NavigationLink";
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { cn } from "@/lib/utils";
 
-export const MenuContent: React.FC<{}> = ({}) => {
+interface MenuContentProps {
+  className?: string;
+}
+export const MenuContent = ({ className }: MenuContentProps) => {
   return (
-    <div className="flex w-full text-sm">
-      <div className="flex w-full justify-between items-center gap-4 py-3">
-        <Link href="/" className="link-card inline-flex items-center gap-2 p-2">
+    <div className={cn("flex w-full text-sm", className)}>
+      <div className="flex w-full md:justify-between md:items-center gap-4 py-3 md:flex-row flex-col px-3 md:px-0">
+        <Link
+          href="/"
+          className="link-card inline-flex md:items-center gap-2 p-2"
+        >
           <img
             src="/assets/me.jpeg"
             alt="Furkan Can Zirek"
@@ -23,8 +30,8 @@ export const MenuContent: React.FC<{}> = ({}) => {
             <span className="text-gray-600">Frontend Engineer</span>
           </div>
         </Link>
-        <div className="flex">
-          <ul className="space-x-2.5 flex  items-center">
+        <div className="flex md:flex-row flex-col gap-4 md:gap-0">
+          <ul className="gap-2.5 flex  md:items-center md:flex-row flex-col">
             {MENU_LINKS.map((link) => (
               <NavigationLink
                 key={link.href}
@@ -36,11 +43,7 @@ export const MenuContent: React.FC<{}> = ({}) => {
               </NavigationLink>
             ))}
           </ul>
-          <div
-            className="
-        px-3 flex gap-2 items-center
-        "
-          >
+          <div className="px-3 flex gap-2 md:items-center">
             <a href="https://github.com/furkancanzirek" target="blank">
               <FaGithub size={20} />
             </a>

@@ -1,8 +1,10 @@
 import MenuList from "@/components/MenuList";
 import { PageTitle } from "@/components/commons/PageTitle";
 import Header from "@/components/commons/Header";
+import { Suspense } from "react";
 
-export default function Home() {
+export default async function Home() {
+
   return (
     <>
       <Header />

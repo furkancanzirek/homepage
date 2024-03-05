@@ -1,10 +1,14 @@
-import { getFilesWithCount } from "@/lib/readMdxFile";
+import { getRandFiles } from "@/lib/readMdxFile";
 import WritingCard from "./WritingCard";
 
-
-
-const WritingMore = async () => {
-  const writes = await getFilesWithCount(2);
+const WritingMore = async ({
+  slug
+}: {
+  slug: string;
+}) => {
+  
+  
+  const writes = await getRandFiles(2,slug);
 
   return (
     <div className="flex flex-col gap-5">

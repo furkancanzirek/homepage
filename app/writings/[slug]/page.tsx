@@ -5,8 +5,6 @@ import { PageTitle } from "@/components/commons/PageTitle";
 import { dateToLocaleShort } from "@/lib/utils";
 import Header from "@/components/commons/Header";
 
-//export generate static params
-
 export async function generateStaticParams() {
   let paths = await getFilesSlugs();
 
@@ -20,11 +18,9 @@ export async function generateStaticParams() {
 }
 
 export default async function PostPage({ params }: { params: any }) {
-  const { content, frontmatter, nextLink, previousLink } = await getMdxDatas({
+  const { content, frontmatter } = await getMdxDatas({
     params,
   });
-
-  
 
   return (
     <>
@@ -45,8 +41,8 @@ export default async function PostPage({ params }: { params: any }) {
           />
 
           <>{content}</>
-          <div className="mt-10 py-10 border-t ">
-            <WritingMore />
+          <div className="mt-10 py-10 border-t">
+            <WritingMore slug={params.slug} />
           </div>
         </div>
       </div>

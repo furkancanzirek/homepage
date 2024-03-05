@@ -15,8 +15,8 @@ export function dateToLocaleShort(date: Date) {
 
 export function dateToMonthDay(date: Date) {
   return new Date(date).toLocaleDateString(undefined, {
-    month: "numeric",
     day: "numeric",
+    month: "short",
   });
 }
 

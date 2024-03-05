@@ -11,7 +11,7 @@ interface WritingCardProps {
 }
 
 const WritingCard = ({ title, summary, date, image,slug }: WritingCardProps) => {
-  date = dateToLocaleShort(date);
+  date = dateToLocaleShort(new Date(date));
   return (
     <Link href={`/writings/${slug}`}
     >

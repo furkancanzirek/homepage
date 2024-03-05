@@ -3,6 +3,8 @@ import path from "path";
 import { readFile, access, readdir } from "fs/promises";
 import { notFound } from "next/navigation";
 
+import { MDXRemote } from 'next-mdx-remote/rsc'
+ 
 const POSTS_FOLDER = path.join(process.cwd(), "app/writings/_posts");
 
 async function readPostFile(slug: string) {
@@ -104,4 +106,17 @@ export const getFilesWithCount = async (count: number) => {
   );
   return data.slice(0, count);
 }
+
+export const getFilesSlugs = async () => {
+  const files = path.resolve(POSTS_FOLDER);
+  const fileNames = await readdir(files);
+
+  const data = await Promise.all(
+    fileNames.map(async (fileName) => {
+      return fileName.replace(".mdx", "");
+    })
+  );
+  return data;
+}
+
 

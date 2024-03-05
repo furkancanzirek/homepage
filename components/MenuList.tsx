@@ -14,7 +14,7 @@ const MenuList = async () => {
   const groupedWrites: { [key: string]: Write[] } = {};
 
   writes.forEach((write) => {
-    const year = dateToYear(write.date);
+    const year = dateToYear(new Date(write.date));
     groupedWrites[year] = [...(groupedWrites[year] || []), write];
   });
 
@@ -48,10 +48,10 @@ const MenuList = async () => {
                         writeIndex === 0 ? "border-t" : ""
                       )}
                     >
-                      {writeIndex === 0 ? dateToYear(write.date) : ""}
+                      {writeIndex === 0 ? dateToYear(new Date(write.date)) : ""}
                     </span>
                     <span className="col-span-1 border-t py-4">
-                      {dateToMonthDay(write.date)}
+                      {dateToMonthDay(new Date(write.date))}
                     </span>
                     <span className="col-span-4 border-t py-4">
                       <span className={cn("hover:underline")}>

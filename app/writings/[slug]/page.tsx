@@ -1,18 +1,30 @@
 import getMdxDatas from "@/lib/readMdxFile";
+import { getFilesSlugs } from "@/lib/readMdxFile";
 import WritingMore from "../components/WritingMore";
 import { PageTitle } from "@/components/commons/PageTitle";
 import { dateToLocaleShort } from "@/lib/utils";
-import MobileMenuDrawer from "@/components/commons/MobileMenuDrawer";
 import Header from "@/components/commons/Header";
 
-export default async function PostPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+//export generate static params
+
+export async function generateStaticParams() {
+  let paths = await getFilesSlugs();
+
+  return paths.map((slug) => {
+    return {
+      params: {
+        slug,
+      },
+    };
+  });
+}
+
+export default async function PostPage({ params }: { params: any }) {
   const { content, frontmatter, nextLink, previousLink } = await getMdxDatas({
     params,
   });
+
+  
 
   return (
     <>

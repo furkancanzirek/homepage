@@ -12,14 +12,12 @@ const Header = ({ goBackLink }: Props) => {
   return (
     <>
       {goBackLink ? (
-        <div>
-          <div className="py-2 border-b  h-12 flex w-full items-center px-3 md:hidden">
-            <Button variant="ghost" size="icon" className="shrink-0" asChild>
-              <Link href={goBackLink} title="Go back">
-                <ArrowLeftIcon size={16} />
-              </Link>
-            </Button>
-          </div>
+        <div className="py-2 border-b  h-12 flex w-full items-center px-3 md:hidden">
+          <Button variant="ghost" size="icon" className="shrink-0" asChild>
+            <Link href={goBackLink} title="Go back">
+              <ArrowLeftIcon size={16} />
+            </Link>
+          </Button>
         </div>
       ) : (
         <MobileMenuDrawer />

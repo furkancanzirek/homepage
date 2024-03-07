@@ -77,6 +77,9 @@ const config = {
       maxHeight: {
         "dynamic-screen": "100dvh",
       },
+      lineHeight:{
+        'extra': '1.75'
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],

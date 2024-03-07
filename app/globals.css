@@ -84,9 +84,6 @@
     @apply font-semibold;
   }
 
-  ul > li {
-    @apply pl-2;
-  }
 
   ul > li::marker {
     @apply text-gray-400;
@@ -95,12 +92,24 @@
   li div {
     @apply inline;
   }
+  ol > li,
+  ul > li{
+    @apply mb-3.5;
+  }
+
+  p{
+    @apply leading-extra;
+  }
 
   li p,
   li div,
   li h1,
   li h2 {
     @apply my-0;
+  }
+
+  pre {
+    @apply my-6;
   }
 
   hr {
@@ -157,6 +166,6 @@
   .writings-wrapper h1,
   .writings-wrapper h2,
   .writings-wrapper h3 {
-    @apply my-4 lg:my-6;
+    @apply my-4 lg:my-5;
   }
 }

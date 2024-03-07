@@ -85,3 +85,16 @@ export async function generateStaticParams() {
   const slugs = files.map((file) => file.replace(/\.mdx$/, ""));
   return slugs.map((slug) => ({ params: { slug } }));
 }
+
+
+export async function generateMetadata({ params }: { params: any }) {
+  const content = fs.readFileSync(
+    path.join("app", "writings", "_posts", params.slug + ".mdx")
+  );
+  const { data: frontmatter } = matter(content);
+  return {
+    title: frontmatter.title,
+    description: frontmatter.summary,
+    date: frontmatter.date,
+  };
+}

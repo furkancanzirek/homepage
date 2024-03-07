@@ -20,7 +20,7 @@ const WritingCard = ({
   date = dateToLocaleShort(new Date(date));
   return (
     <Link href={`/writings/${slug}`}>
-      <div className="flex flex-col-reverse md:flex-row gap-5">
+      <div className="flex flex-col-reverse sm:flex-row gap-5">
         <div className="flex flex-col space-y-1 flex-1">
           <h2>{title}</h2>
           <p className="leading-5 text-gray-600 pt-1 line-clamp-2">{summary}</p>
@@ -29,16 +29,19 @@ const WritingCard = ({
           </div>
         </div>
         <div
-          className="h-40 md:w-60 relative
-         max-w-52 md:max-w-60
-        aspect-[1/1] md:aspect-auto"
+          className="h-40 sm:w-60 relative
+         max-w-52 sm:max-w-60
+        aspect-[1/1] sm:aspect-auto
+        
+        "
         >
           <Image
             src={image}
-            alt="Picture of the author"
+            alt={title}
             fill
-            className={"animate-reveal"}
-            sizes="300px"
+            sizes="(min-width: 640px) 238px, 206px"
+            className={"animate-reveal object-cover"}
+            
           />
         </div>
       </div>

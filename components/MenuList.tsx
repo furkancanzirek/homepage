@@ -24,9 +24,9 @@ const MenuList = async () => {
   return (
     <div className="text-sm ">
       <div className="grid grid-cols-6 py-2 font-medium text-gray-500">
-        <span className="col-span-1 hidden text-left md:grid">Year</span>
-        <span className="col-span-1 hidden text-left md:grid">Date</span>
-        <span className="col-span-4 hidden text-left md:grid">Title</span>
+        <span className="col-span-1 text-left grid">Year</span>
+        <span className="col-span-1 text-left grid">Date</span>
+        <span className="col-span-4 text-left grid">Title</span>
       </div>
       <div className="group/wrapper">
         {Object.entries(groupedWrites)
@@ -60,7 +60,7 @@ const MenuList = async () => {
                       <span className="col-span-1 border-t py-4">
                         {dateToMonthDay(new Date(write.date))}
                       </span>
-                      <span className="col-span-4 border-t py-4">
+                      <span className="col-span-4 border-t py-4 line-clamp-2">
                         <span className={cn("hover:underline")}>
                           {write.title}
                         </span>

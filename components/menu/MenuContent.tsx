@@ -3,6 +3,7 @@ import { NavigationLink } from "@/components/commons/NavigationLink";
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 interface MenuContentProps {
   className?: string;
@@ -15,7 +16,7 @@ export const MenuContent = ({ className }: MenuContentProps) => {
           href="/"
           className="link-card inline-flex md:items-center gap-2 p-2"
         >
-          <img
+          <Image
             src="/assets/me.jpeg"
             alt="Furkan Can Zirek"
             width={40}

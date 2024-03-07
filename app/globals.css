@@ -108,8 +108,8 @@
     @apply my-0;
   }
 
-  pre {
-    @apply my-6;
+  code {
+    @apply my-6 max-w-full overflow-x-auto text-sm md:text-base;
   }
 
   hr {

@@ -10,8 +10,6 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import path from "path";
 import rehypePrettyCode from "rehype-pretty-code";
 
-export const runtime = "edge";
-
 export default async function PostPage({ params }: { params: any }) {
   const theme = {
     colors: {
